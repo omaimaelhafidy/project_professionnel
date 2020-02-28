@@ -1,0 +1,15 @@
+$primary-color: #ff5b5b;
+$dark-blue: #242941;
+$grey-blue: #5a5e71;
+$grey: #9fa1ab;
+$light: #eef2f6;
+
+$small: 900px;
+$medium: 1200px;
+$big: 1500px;
+
+@mixin media($size) {
+    @media screen and (min-width: $size) {
+        @content;
+    }
+}

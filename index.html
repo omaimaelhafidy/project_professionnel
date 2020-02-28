@@ -2,25 +2,67 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- displays site properly based on user's device -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css?family=Barlow|Barlow+Condensed:400,700&display=swap" rel="stylesheet">
+  <link href="./css/normalize.css" rel="stylesheet">
+  <link href="./css/main.css" rel="stylesheet">
+  <title>Frontend Mentor | Project tracking intro component</title>
+</head>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
-  <link rel="stylesheet" href="style.scss" </head> <body>
-  <img src="images/logo.svg" alt="logo">
-  <img src="images/illustration-devices.svg" alt="image">
-  <img src="images/icon-hamburger.svg" alt="icon">
-  <button>NEW</button>
-  <div>MONOGRAPH DASHBOARD</div>
-  <div>POWERFUL INSIGHTS INTO YOUR TEAM</div>
-  <div>Project planning and time tracking<br>for agile teams</div>
-  <button>SCHEDULE A DEMO</button>
-  <div>TO SEE A PREVIEW</div>
+<body>
 
-  <footer>
-    <p class="attribution">Coded by <a href="#"></a>.</p>
-  </footer>
-  </body>
+  <div class="bg-wrapper">
+    <!-----NAVBAR------>
+    <header class="nav-container">
+      <nav class="container nav">
+        <div class="nav__logo">
+          <img class="img-fluid" src="./images/logo.svg" alt="">
+        </div>
+        <ul class="nav__list">
+          <li class="nav__list__item"><a href="#">Product</a></li>
+          <li class="nav__list__item"><a href="#">Features</a></li>
+          <li class="nav__list__item"><a href="#">Pricing</a></li>
+          <li class="nav__list__item nav__list__item--separator"><span>&bull;</span></li>
+          <li class="nav__list__item nav__list__item--login"><a href="#">Login</a></li>
+        </ul>
+        <div class="nav__hamburger">
+          <div class="nav__hamburger__line"></div>
+          <div class="nav__hamburger__line"></div>
+          <div class="nav__hamburger__line"></div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="hero">
+
+      <div class="hero__content container">
+        <p class="title title--small title--spacing"><span>New</span> Monograph Dashboard</p>
+        <h1 class="title title--big">Powerful insights<br>into your team</h1>
+        <h2>Project planning and time tracking for agile teams</h2>
+
+        <div class="cta">
+          <a href="#" class="btn btn--primary">Schedule a demo</a>
+          <p class="cta__text title title--small">to see a preview</p>
+        </div>
+      </div>
+
+      <div class="hero__image">
+        <img class="img-fluid" src="./images/illustration-devices.svg">
+      </div>
+
+    </div>
+
+  </div>
+  <script>
+    const hamburger = document.querySelector(".nav__hamburger");
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("nav__hamburger--open");
+      document.querySelector(".nav__list").classList.toggle("nav__list--open");
+    });
+  </script>
+
+</body>
 
 </html>
